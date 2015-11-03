@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'm3r-modal'
+  name: 'm3r-modal',
+  isDevelopingAddon: function() {
+    return true;
+  }
 };
