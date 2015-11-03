@@ -15,7 +15,7 @@ export default Ember.Service.extend({
 
     show(template, model) {
         if(this.get('showing')) {
-            console.log('Already showing modal!');
+            console.log("There's already a modal displaying!");
             return;
         }
         this.set('showing', true);
@@ -31,7 +31,7 @@ export default Ember.Service.extend({
     },
     close() {
         if(!this.get('showing')) {
-            console.log('Not showing modal!');
+            console.log('There is no modal to close!');
             return;
         }
         this.set('showing', false);
