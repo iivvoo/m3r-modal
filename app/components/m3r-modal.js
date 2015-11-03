@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    modal: Ember.inject.service(),
+
     show: function() {
         this.$('.modal').modal();
     }.on('didInsertElement'),
@@ -10,10 +12,8 @@ export default Ember.Component.extend({
     }.on('willDestroyElement'),
 
     actions: {
-
         closeModal() {
-            console.log("m3r-modal component show-debtor closeModal");
-            this.get('close')();
+            this.get('modal').close();
         }
     }
 });
