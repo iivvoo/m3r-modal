@@ -29,7 +29,7 @@ export default Ember.Service.extend({
         this.set('defer', defer);
         return defer.promise;
     },
-    close() {
+    close(res) {
         if(!this.get('showing')) {
             console.log('There is no modal to close!');
             return;
@@ -39,6 +39,6 @@ export default Ember.Service.extend({
             outlet: this.get('outletname'),
             parentView: this.get('routename')
         });
-        this.get('defer').resolve();
+        this.get('defer').resolve(res);
     }
 });
