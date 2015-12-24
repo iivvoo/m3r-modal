@@ -16,7 +16,7 @@ export default Ember.Service.extend({
     show(template, model) {
         if(this.get('showing')) {
             console.log("There's already a modal displaying!");
-            return;
+            return null;
         }
         this.set('showing', true);
 
