@@ -1,8 +1,8 @@
 <div class="modal-footer">
-    {{#if hasBlock}}
-        {{yield}}
-    {{else}}
-        <button type="button" class="btn btn-default" {{action "closeModal"}}>Close</button>
-        <button type="button" class="btn btn-primary" {{action 'ok'}}>OK</button>
-    {{/if}}
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <button type="button" class="btn btn-default" {{action "closeModal"}}>Close</button>
+    <button type="button" class="btn btn-primary" {{action 'ok'}}>OK</button>
+  {{/if}}
 </div>
